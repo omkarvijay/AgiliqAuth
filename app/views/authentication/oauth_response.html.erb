@@ -1,0 +1,18 @@
+<h1>Second Step of Authorization</h1>
+<p>Please copy the code shown and paste it in the code field given below</p>
+<p><strong>Code:</strong></p>
+<%= @code %>
+
+<p> Please enter client id, client secret, redirect uri and code which is given above </p>
+
+<%= form_tag 'http://join.agiliq.com/oauth/access_token/' do %>
+  <%= label_tag 'Enter the Cliend id' %> <br/>
+  <%= text_field_tag :client_id %> <br/>
+  <%= label_tag 'Enter the redirect uri' %> <br/>
+  <%= text_field_tag :redirect_uri %> <br/>
+  <%= label_tag 'Enter the client secret' %> <br/>
+  <%= text_field_tag :client_secret %> <br/>
+  <%= label_tag 'Enter the code displayed above' %> <br/>
+  <%= text_field_tag :code %> <br/>
+  <%= submit_tag 'Send'%>
+<%end%>

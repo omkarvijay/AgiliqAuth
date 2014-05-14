@@ -1,0 +1,20 @@
+<h1> Step 3 Acquired acess token </h1>
+<h1> Upload Resume</h1>
+
+<p><strong> Enter the access token, first name, last name, projects url and code url</strong> </p>
+
+<%= form_tag 'http://join.agiliq.com/api/resume/upload/' do %>
+  <%= label_tag 'Enter the access token' %> <br/>
+  <%= text_field_tag 'access_token' %> <br/>
+  <%= label_tag 'Enter the First name' %> <br/>
+  <%= text_field_tag 'first_name' %> <br/>
+  <%= label_tag 'Enter the last name' %> <br/>
+  <%= text_field_tag 'last_name' %> <br/>
+  <%= label_tag 'Enter the projects url' %> <br/>
+  <%= text_field_tag 'projects_url' %> <br/>
+  <%= label_tag 'Enter the code url' %> <br/>
+  <%= text_field_tag 'code_url' %> <br/>
+  <%= label_tag 'Upload resume' %>
+  <%= file_field_tag 'resume' %> <br/>
+  <%= submit_tag 'Send'%>
+<% end %>
