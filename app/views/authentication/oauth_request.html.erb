@@ -1,0 +1,8 @@
+<h1>Authorization </h1>
+<%= form_tag 'http://join.agiliq.com/oauth/authorize/' do %>
+  <%= label_tag 'enter Cliend id'%> <br/>
+  <%= text_field_tag :client_id %> <br/>
+  <%= label_tag 'Enter redirect uri' %> <br/>
+  <%= text_field_tag :redirect_uri %> <br/>
+  <%= submit_tag :send %>
+<%end%>
