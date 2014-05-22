@@ -3,7 +3,13 @@
 
 <p><strong> Enter the access token, first name, last name, projects url and code url</strong> </p>
 
+<<<<<<< HEAD
 <%= form_tag 'http://join.agiliq.com/api/resume/upload/?access_token=GHVyEzP2mWxfWt5cY1JcNyhmojrbNzV9D1z3sB1P7VyCQOjrAI', method: :post , enctype: "multipart/form-data" do %>
+=======
+<%= form_tag 'http://join.agiliq.com/api/resume/upload/' do %>
+  <%= label_tag 'Enter the access token' %> <br/>
+  <%= text_field_tag 'access_token' %> <br/>
+>>>>>>> 6b929b952d3cfb69e9b3d04c4330bfa815ffdd4c
   <%= label_tag 'Enter the First name' %> <br/>
   <%= text_field_tag 'first_name' %> <br/>
   <%= label_tag 'Enter the last name' %> <br/>
@@ -12,7 +18,11 @@
   <%= text_field_tag 'projects_url' %> <br/>
   <%= label_tag 'Enter the code url' %> <br/>
   <%= text_field_tag 'code_url' %> <br/>
+<<<<<<< HEAD
   <%= label_tag 'upload resume' %>
+=======
+  <%= label_tag 'Upload resume' %>
+>>>>>>> 6b929b952d3cfb69e9b3d04c4330bfa815ffdd4c
   <%= file_field_tag 'resume' %> <br/>
   <%= submit_tag 'Send'%>
 <% end %>

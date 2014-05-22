@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 == README
 
 This README would normally document whatever steps are necessary to get the
@@ -26,3 +27,20 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+=======
+
+
+
+I have implemented the authentication in join.agiliq using ruby on rails framework. In order to authenticate join.agiliq first i have registered with join.agiliq. I have acquired the cliend id and client secret tokens from join.agiliq. I have given the redirect_uri as http://localhost:3000/oauth/response and submitted the form. Then i have created an AuthenticationController for authentication which you will find it in app/controllers/authentication_controller.rb. I have created an action which is by name 'oauth_request'. In order to access the action in a controller there must be route(url) which i have created in /config/routes.rb.
+
+In order to run the application first we need to start the local server which can be done by comman rails server or rails s
+
+For this route i have kept a form which has the following fields client_id and redirect_uri. Client_id is obtained from the site and i have given the redirect_uri as http://localhost:3000/oauth/response because the redirect uri should be the same as the one entered in redirect uri in the site. Whenever i click on send button the form redirects to the url join_agiliq.com/oauth/authorize/ with client id and redirect uri. 
+
+I have obtained the response from oauth and recieved a code in oauth_response action which i have created. i have stored the code in @code. oauth_resoponse has another form which has fields client_id, client_secret, redirect_uri and code. I have entered the code this obtained in the code field and the same redirect uri in the redirect_uri field. Whenever i click on button send the form redirects to the join.agiliq.com/oauth/access_token/ with the following fields client_id, client_secret, redirect_uri and the code.
+
+I have acquired a response from oauth getting the access_token. I have saved the access token.
+I have created one more action upload_resume in authentication controller which is the last step of authenticaiton of agiliq. 
+upload_resume contains a form to make a multipart request. The form contains first_name, last_name, access_token,projects_url and code url.
+Whenever i click on send the form redirects to the http://join.agiliq.com/api/resume/upload/ with the above following fields as a request
+>>>>>>> 6b929b952d3cfb69e9b3d04c4330bfa815ffdd4c
